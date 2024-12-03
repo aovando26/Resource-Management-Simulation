@@ -7,7 +7,8 @@ using UnityEngine;
 public class MainManager : MonoBehaviour
 {
     // will be shared by all the instances of that class
-    public static MainManager Instance;
+    // set the property’s value from within the class, but only get it [read-only] from outside the class
+    public static MainManager Instance { get; private set; }
 
     public Color TeamColor; // new variable declared
 
